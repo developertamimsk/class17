@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1370px;
+    margin: 0 auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header-box{
+    background: #000025;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-box .img img{
+    width: 120px;
+    margin-left: 100px;
+}
+
+.header-box .menu ul{
+    display: flex;
+    flex: 1;
+    margin-right: 100px;
+}
+.header-box .menu ul li{
+    padding: 10px 35px;
+    position: relative;
+}
+.header-box .menu ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.header-box .menu ul li::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #EA2027;
+    border-left: 4px solid #EA2027;
+    transition: .5s linear;
+    opacity: 0;
+}
+.header-box .menu ul li::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0%;
+    border-bottom: 4px solid #EA2027;
+    border-right: 4px solid #EA2027;
+    transition: .5s linear;
+    opacity: 0;
+}
+.header-box .menu ul li:hover::before {
+    width: 97%;
+    height: 87%;
+    opacity: 1;
+}
+.header-box .menu ul li:hover::after{
+    width: 97%;
+    height: 87%;
+    opacity: 1;
+}
+.baner{
+    background: url(./img/baner.jpg) center;
+    background-size: cover;
+    height: 650px;
+    display: flex;
+    align-items: center;
+}
+.baner .div{
+    margin-left: 100px;
+}
+.baner .div p{
+    padding: 20px 0;
+    margin: 25px 0;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.baner .div h2{   
+    position: relative;
+    font-size: 50px;
+    color: #ffffff;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 3px #000025;
+    text-transform: uppercase;
+}
+.baner .div h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000025;
+    -webkit-text-stroke: 0vw #000025;
+    border-right: 5px solid #000025;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    white-space: nowrap;
+}
+@keyframes animate{
+    0%,100%{
+        width: 0; 
+    }
+    50%{
+        width: 100%; 
+    }
+}
+.baner .div a{
+    text-decoration: none;
+    text-transform: capitalize;
+    padding:20px;
+    font-size: 30px;
+    color: aliceblue;
+    background: #000025;
+    border-radius: 10px;
+    transition: .5s;
+}
+.baner .div a:hover{
+    background: aliceblue;
+    color: #000025;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.baner .div .me{
+    background: aliceblue;
+    color: #000025;
+    font-weight: bold;
+}
+.baner .div .me:hover{
+    color: aliceblue;
+    background: #000025;
+}
+.about-box{
+    background:#130f40;
+    padding: 80px 0;
+}
+.what .boss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    color: aliceblue;
+}
+.what .boss h1{
+    font-size: 35px;
+    border-bottom: 3px solid aliceblue;
+}
+.what .boss h2{
+    padding: 10px 0;
+}
+.what .boss p{
+    width: 500px;
+}
+.about-box h1{
+    text-align: center;
+    font-size: 50px;
+    color: aliceblue;
+    padding-bottom: 30px;
+    text-transform: capitalize;
+}
+.about-box .div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-box .div .img img{
+    width: 300px;
+    position: relative;
+}
+.about-box .div .text p{
+    width: 500px;
+    line-height: 25px;
+    color: aliceblue;
+    font-weight: bold;
+}
+.what{
+    background: #f0932b;
+    padding: 80px 0;
+}
+.what .box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.what .box .div{
+    display: flex;
+    justify-content: space-evenly;
+    background: aliceblue;
+    width: 30%;
+    padding: 50px 0;
+    border-radius: 30px;
+    transition: .5s;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.what .box .div:hover{
+    background:#130f40;
+    color: aliceblue;
+}
+.what .box .div .text p{
+    width: 200px;
+}
+.what .box .div .text h1{
+    text-transform: capitalize
+}
+.services{
+    background: #130f40;
+    padding: 80px 0;
+    color: aliceblue;
+    text-transform: capitalize;
+    text-align: center;
+}
+.services p{
+    padding: 20px 0 50px 0;
+}
+.services .div{
+    display: flex;
+    justify-content: center;
+}
+.services .div .img-text{
+    margin: 0 20px;
+    border: 2px solid aliceblue;
+    padding: 0px 0 20px 0;
+}
+.services .div .img-text img{
+    width: 400px;
+}
+.services .img{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.team{
+    background: #000025; 
+    color: aliceblue;
+    padding: 80px 0;
+}
+.team h1{
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+    padding-bottom: 25px;
+}
+.team .div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.team .div .img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.team .div .img .tamim{
+    display: flex;
+    justify-content: center;
+}
+.team .div .img .tamim i{
+    padding: 10px;
+    font-size: 22px;
+    transition: .5s;
+}
+.team .div .img .tamim i:hover{
+    background: #EA2027;
+    border-radius: 50%;
+}
+.team .div .img img{
+    width: 250px;
+}
+.footer-top{
+    background: #EA2027;
+    padding: 80px 0;
+    color: aliceblue;
+    text-transform: capitalize;
+    text-align: center;
+    font-style: italic;
+}
+.footer-top .div h1{
+    font-size: 40px;
+}
+.footer-top .div p{
+    padding: 20px 0;
+}
+.footer-top .div a{
+    background: #f5f6fa;
+    padding: 15px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #c23616;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.footer-top .div a:hover{
+    background:#1B9CFC ;
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+.footer{
+    background: #000025;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0;
+    color: aliceblue;
+}
+.footer i{
+    padding: 10px;
+    transition: .5s;
+}
+.footer i:hover{
+    background: #EA2027;
+    border-radius: 50%;
+}
